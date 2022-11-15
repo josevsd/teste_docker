@@ -1,0 +1,87 @@
+.main {
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 1.25em;
+}
+
+.container-dashboard {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+
+}
+
+.title {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    --text-opacity: 1;
+    color: #24262d;
+    color: rgba(36, 38, 45, var(--text-opacity));
+
+}
+
+.row {
+    display: bl;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-left: -15px;
+}
+
+.cards {
+    flex: 0 0 20%;
+    max-width: 30%;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+.card {
+    box-shadow: 0 0 20px rgb(0 0 0 / 8%);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(230, 112, 112);
+    border-radius: 0.25rem;
+}
+
+.card .card-body {
+    float: left;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+}
+
+.stat-widget-five  {
+    min-height: 60px;
+}
+
+.stat-widget-five .stat-icon {
+    font-size: 50px;
+    line-height: 50px;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+
+.stat-widget-five .stat-content {
+    margin-left: 30%;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.text-left {
+    text-align: left!important;
+}
+
+.stat-widget-five .stat-text .stat-heading {
+    color: #455a64;
+    font-size: 20px;
+}
