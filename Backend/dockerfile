@@ -1,7 +1,5 @@
-
 FROM python:3
-COPY --from=node / /
-FROM node 
+FROM node:alpine
 
 WORKDIR /usr/index
 
@@ -12,7 +10,5 @@ RUN npm install
 COPY . .
 
 EXPOSE 3500
-
-VOLUME [ "/backup/" ]
 
 CMD ["npm", "start"]

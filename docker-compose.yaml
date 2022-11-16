@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql 
+    restart: always 
+    environment:
+      MYSQL_ROOT_PASSWORD=wordpress
+      MYSQL_DATABASE=tcc
+      MYSQL_USER=matheus 
+      MYSQL_PASSWORD=secret
+  
+  index:
+    build: .
+    image: node-mysql-app
+    depends_on:
+      - mysqldb
+    environment:
+      BACKEND_DB_HOST: mysqldb:3306
+      BACKEND_DB_USER: matheus 
+      BACKEND_DB_PASSWORD: secret
+      BACKEND_DB_NAME: wordpress 
+
+volumes:
+  db_data: {}
